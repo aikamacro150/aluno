@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+package conexao;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -23,7 +25,7 @@ public class Conexao {
     public static String password = "postgres";
 
     public Conexao(Connection conn) {
-        this.conn = conn;
+        Conexao.conn = conn;
     }
 
     public static Connection getConexao() throws SQLException, ClassNotFoundException {
@@ -51,9 +53,7 @@ public class Conexao {
         try {
             getConexao();
             System.out.println("Feito!");
-        } catch (SQLException ex) {
-            Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
