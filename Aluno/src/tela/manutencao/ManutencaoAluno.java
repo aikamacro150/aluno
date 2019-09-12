@@ -32,11 +32,9 @@ public class ManutencaoAluno extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jtfSexo = new javax.swing.JComboBox<>();
         jtfCodigo = new javax.swing.JTextField();
         jtfNome = new javax.swing.JTextField();
-        jtfSobrenome = new javax.swing.JTextField();
+        jtfEndereco = new javax.swing.JTextField();
         btnAdicionar = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         btn = new javax.swing.JButton();
@@ -49,18 +47,9 @@ public class ManutencaoAluno extends javax.swing.JDialog {
 
         jLabel2.setText("Codigo:");
 
-        jLabel3.setText("Sobrenome:");
+        jLabel3.setText("Endereco:");
 
         jLabel4.setText("Nome:");
-
-        jLabel5.setText("Sexo:");
-
-        jtfSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
-        jtfSexo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfSexoActionPerformed(evt);
-            }
-        });
 
         jtfCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,27 +83,23 @@ public class ManutencaoAluno extends javax.swing.JDialog {
                         .addContainerGap()
                         .addComponent(btnAdicionar)
                         .addGap(27, 27, 27)
-                        .addComponent(btnAlterar)))
-                .addContainerGap(85, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAlterar))
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btn)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jtfCodigo)
                                 .addComponent(jtfNome)
-                                .addComponent(jtfSobrenome, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnExcluir))))
+                                .addComponent(jtfEndereco, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
+                        .addGap(28, 28, 28)
+                        .addComponent(btnExcluir)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,12 +116,8 @@ public class ManutencaoAluno extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(jtfSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jtfSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                    .addComponent(jtfEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdicionar)
                     .addComponent(btnAlterar)
@@ -151,10 +132,6 @@ public class ManutencaoAluno extends javax.swing.JDialog {
     private void jtfCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfCodigoActionPerformed
-
-    private void jtfSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSexoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfSexoActionPerformed
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
 Controlador.ControladorAluno.inserir(this);       // TODO add your handling code here:
@@ -206,13 +183,11 @@ Controlador.ControladorAluno.inserir(this);       // TODO add your handling code
     public javax.swing.JButton btnAlterar;
     public javax.swing.JButton btnExcluir;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     public javax.swing.JTextField jtfCodigo;
+    public javax.swing.JTextField jtfEndereco;
     public javax.swing.JLabel jtfManutencao;
     public javax.swing.JTextField jtfNome;
-    public javax.swing.JComboBox<String> jtfSexo;
-    public javax.swing.JTextField jtfSobrenome;
     // End of variables declaration//GEN-END:variables
 }
